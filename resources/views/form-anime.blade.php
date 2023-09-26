@@ -17,25 +17,25 @@
             @csrf
             <div class="mb-4">
             <label for="character_name" class="block mb-2 text-sm text-gray-600">Character Name</label>
-            <input type="text" id="character_name" name="character_name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+            <input type="text" id="character_name" value="{{old('character_name')}}" name="character_name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
             </div>
             <div class="mb-4">
             <label for="anime_name" class="block mb-2 text-sm text-gray-600">Anime name</label>
-            <input type="text" id="anime_name" name="anime_name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+            <input type="text" id="anime_name" value="{{old('anime_name')}}" name="anime_name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
             </div>
             <div class="mb-4">
             <label for="character_rating" class="block mb-2 text-sm text-gray-600">Character Rating</label>
-            <input type="character_rating" id="character_rating" name="character_rating" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+            <input type="character_rating" id="character_rating" value="{{old('character_rating')}}" name="character_rating" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
             </div>
             <div class="mb-4">
             <label for="email_sender" class="block mb-2 text-sm text-gray-600">Email</label>
-            <input type="email" id="email_sender" name="email_sender" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+            <input type="email" id="email_sender" value="{{old('email_sender')}}" name="email_sender" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
             </div>
             <div class="mb-6">
             <label for="character_image" class="block mb-2 text-sm text-gray-600">Character Images</label>
             <input
                 class="relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.32rem] text-base font-normal text-neutral-700 transition duration-300 ease-in-out "
-                type="file"
+                type="file" 
                 id="character_image" name="character_image" />
             </div>
             <button type="submit" class="w-32 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white py-2 rounded-lg mx-auto block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mb-2">Add</button>
