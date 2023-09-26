@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnimeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/form');
 });
+
+Route::get('/form', [AnimeController::class, 'viewForm']);
+Route::post('/form', [AnimeController::class, 'addAnime']);
+
+Route::get('/list', [AnimeController::class, 'showAnime']);
