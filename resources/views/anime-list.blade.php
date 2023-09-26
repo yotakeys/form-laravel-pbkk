@@ -13,7 +13,7 @@
         <div class="min-h-screen flex items-center justify-center">
         <div class="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
         @if(Session::get('status') != null)
-            <div class="border">{{ \Illuminate\Support\Facades\Session::get('status') }}</div>
+            <div class="text-lime-500">{{ \Illuminate\Support\Facades\Session::get('status') }}</div>
         @endisset
 
         @foreach($animes as $anime)
