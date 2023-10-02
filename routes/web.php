@@ -15,7 +15,7 @@ use App\Http\Controllers\AnimeController;
 */
 
 Route::get('/', function () {
-    return redirect('/form');
+    return redirect('/list');
 });
 
 Route::get('/form', [AnimeController::class, 'viewForm']);
